@@ -32,5 +32,5 @@ java -Xmx2G -jar DREP.jar --install
 - Download the latest version.
 - Run it using this command: 
 ```batch
-java -Xmx2G -jar DREP.jar --cli
+java -Xmx2G -jar DREP.jar --cli [args...]
 ```
