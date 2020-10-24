@@ -6,26 +6,26 @@ import java.awt.*;
 
 public class LightMode implements Colors {
     public String name() {
-        return null;
+        return "LightMode";
     }
 
     public Color primary() {
-        return null;
+        return new Color(179, 179, 179);
     }
 
     public Color text() {
-        return null;
+        return new Color(0, 0, 0);
     }
 
     public Color background() {
-        return null;
+        return new Color(255, 255, 255);
     }
 
     public Color inactiveText() {
-        return null;
+        return new Color(55, 55, 55);
     }
 
     public Color inactivePrimary() {
-        return null;
+        return new Color(150, 150, 150);
     }
 }

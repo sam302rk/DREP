@@ -50,6 +50,9 @@ public class DREP {
                 }
             }
 
+            System.out.println(selectedColors.name());
+            System.out.println(minimal);
+
             DREPClient.run(minimal, selectedColors);
         }
     }

@@ -6,26 +6,26 @@ import java.awt.*;
 
 public class DarkMode implements Colors {
     public String name() {
-        return null;
+        return "DarkMode";
     }
 
     public Color primary() {
-        return null;
+        return new Color(43, 43, 44);
     }
 
     public Color text() {
-        return null;
+        return new Color(255, 255, 255);
     }
 
     public Color background() {
-        return null;
+        return new Color(63, 63, 64);
     }
 
     public Color inactiveText() {
-        return null;
+        return new Color(49, 51, 53);
     }
 
     public Color inactivePrimary() {
-        return null;
+        return new Color(60, 59, 59);
     }
 }
