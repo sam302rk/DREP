@@ -1,6 +1,6 @@
-# DREP - [Releases](releases)
+# DREP - [Releases](https://github.com/GamingCrafthd/DREP/releases)
 
-© GamingCraft_hd 2020<br>
+Â© GamingCraft_hd 2020<br>
 Made for UtilityClient, PixelSplash and Statify.
 
 ## Requirements
