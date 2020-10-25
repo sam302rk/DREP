@@ -1,7 +1,8 @@
-public class DREP {
+// If you rename class, rename file name too. (and in compile.bat)
+public class UtilityClient {
 	
 	public String getName() {
-		return "DREP Test";
+		return "Utility-Client";
 	}
 	
 	public String getAuthor() {
@@ -9,31 +10,31 @@ public class DREP {
 	}
 	
 	public String getApplicationId() {
-		return "769873496016420885";
+		return "742760119984455701";
 	}
 	
 	public String getBigImage() {
-		return "big";
+		return "utilityclient";
 	}
 	
 	public String getSmallImage() {
-		return "small";
+		return "none";
 	}
 	
 	public String getBigImageDefaultText() {
-		return "This Image is nice.";
+		return "Open-Source!";
 	}
 	
 	public String getSmallImageDefaultText() {
-		return "<3";
+		return "none";
 	}
 	
 	public String getDefaultTopText() {
-		return "Hello World!";
+		return "Visit our website for details.";
 	}
 	
 	public String getDefaultBottomText() {
-		return "This is a test.";
+		return "https://uc.gamingcraft.de";
 	}
 	
 }

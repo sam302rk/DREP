@@ -7,6 +7,4 @@ public interface Colors {
     Color primary();
     Color text();
     Color background();
-    Color inactiveText();
-    Color inactivePrimary();
 }

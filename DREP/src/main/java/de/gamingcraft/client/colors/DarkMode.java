@@ -10,7 +10,7 @@ public class DarkMode implements Colors {
     }
 
     public Color primary() {
-        return new Color(43, 43, 44);
+        return new Color(52, 53, 55);
     }
 
     public Color text() {
@@ -18,14 +18,6 @@ public class DarkMode implements Colors {
     }
 
     public Color background() {
-        return new Color(63, 63, 64);
-    }
-
-    public Color inactiveText() {
-        return new Color(49, 51, 53);
-    }
-
-    public Color inactivePrimary() {
-        return new Color(60, 59, 59);
+        return new Color(60, 63, 65);
     }
 }

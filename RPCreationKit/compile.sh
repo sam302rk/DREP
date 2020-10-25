@@ -1,1 +1,0 @@
-javac RichPresence.java

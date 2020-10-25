@@ -36,11 +36,7 @@ public class DREPClient {
         selectRPText.setForeground(colorSet.text());
 
         ArrayList<Object> items = new ArrayList<Object>();
-
-        System.out.println(System.getenv("ProgramFiles"));
-
         File rps = new File(DREP.workingDirectory + "richpresences\\");
-
         URL url = rps.toURI().toURL();
         URL[] urls = new URL[]{url};
         ClassLoader cl = new URLClassLoader(urls);
@@ -70,15 +66,14 @@ public class DREPClient {
         runRP.addActionListener((actionEvent) -> {
             try {
                 for (Class c : classes) {
-                    if(selectRP.getSelectedItem().equals(c.getDeclaredMethod("getName").invoke(c.newInstance()) + " by " + c.getDeclaredMethod("getAuthor").invoke(c.newInstance()))) {
+                    if(selectRP.getSelectedItem().equals(c.getDeclaredMethod("getName").invoke(c.newInstance())
+                            + " by " + c.getDeclaredMethod("getAuthor").invoke(c.newInstance()))) {
                         DiscordRP.run(c);
+                        runRP.setEnabled(false);
                         return;
                     }
                 }
-            }catch (Exception e) {
-
-            }
-
+            }catch (Exception e) { }
         });
 
         if(true) {
@@ -92,44 +87,31 @@ public class DREPClient {
 
             JLabel lbl = new JLabel("Edit Values");
             lbl.setForeground(colorSet.text());
-            lbl.setBounds(25, 100 /*125*/, 400, 30);
+            lbl.setBounds(25, 100, 400, 30);
 
             frame.add(lbl);
 
-            JTextField topText = new JTextField("Top Text..."),
-                    bottomText = new JTextField("Bottom Text..."),
-                    bigImgText = new JTextField("Big Image Text..."),
-                    smallImgText = new JTextField("Small Image Text...");
+            JTextField[] fields = {new JTextField("Top Text..."), new JTextField("Bottom Text..."), new JTextField("Big Image Text..."), new JTextField("Small Image Text...")};
 
-            topText.setForeground(colorSet.text());
-            bottomText.setForeground(colorSet.text());
-            bigImgText.setForeground(colorSet.text());
-            smallImgText.setForeground(colorSet.text());
+            int x = 0;
 
-            topText.setBackground(colorSet.primary());
-            bottomText.setBackground(colorSet.primary());
-            bigImgText.setBackground(colorSet.primary());
-            smallImgText.setBackground(colorSet.primary());
-
-            topText.setBounds(25, 125, 575, 30);
-            bottomText.setBounds(25, 125+35, 575, 30);
-            bigImgText.setBounds(25, 125+70, 575, 30);
-            smallImgText.setBounds(25, 125+105, 575, 30);
-
-            frame.add(topText);
-            frame.add(bottomText);
-            frame.add(bigImgText);
-            frame.add(smallImgText);
+            for (JTextField jtf : fields) {
+                jtf.setForeground(colorSet.text());
+                jtf.setBackground(colorSet.primary());
+                jtf.setBounds(25, 125+(35*x), 575, 30);
+                x++;
+                frame.add(jtf);
+            }
 
             JButton updateButton = new JButton("Update Values");
 
             updateButton.setBackground(colorSet.primary());
             updateButton.setForeground(colorSet.text());
-            updateButton.setBounds(25, 125+140, 575, 30); // 125+140+35
+            updateButton.setBounds(25, 265, 575, 30);
 
             updateButton.addActionListener((action) -> {
                 try {
-                    DiscordRP.updatePresence(topText.getText(), bottomText.getText(), bigImgText.getText(), smallImgText.getText());
+                    DiscordRP.updatePresence(fields[0].getText(), fields[1].getText(), fields[2].getText(), fields[3].getText());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
