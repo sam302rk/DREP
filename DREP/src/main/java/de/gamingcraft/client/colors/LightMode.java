@@ -10,7 +10,7 @@ public class LightMode implements Colors {
     }
 
     public Color primary() {
-        return new Color(179, 179, 179);
+        return new Color(239, 239, 239);
     }
 
     public Color text() {

@@ -1,34 +1,30 @@
 package de.gamingcraft;
 
-import de.gamingcraft.cli.DREPCLI;
-import de.gamingcraft.client.Colors;
-import de.gamingcraft.client.DREPClient;
-import de.gamingcraft.client.colors.DarkMode;
-import de.gamingcraft.client.colors.LightMode;
-import de.gamingcraft.installer.DREPInstaller;
+import de.gamingcraft.cli.*;
+import de.gamingcraft.client.*;
+import de.gamingcraft.client.colors.*;
 import joptsimple.*;
-
 import java.util.ArrayList;
 
 public class DREP {
 
-    private static boolean cli, installer, minimal;
+    private static boolean cli, minimal;
     private static String selectedDesign;
 
     private static ArrayList<Colors> existingColors = new ArrayList<Colors>();
 
-    public static void main(String[] args) {
+    public static String workingDirectory = "C:\\DREP\\";
+
+    public static void main(String[] args) throws Exception {
         OptionParser o = new OptionParser();
 
-        o.accepts("cli");
-        o.accepts("install");
+        o.accepts("cli").withRequiredArg().defaultsTo("");
         o.accepts("minimal");
         OptionSpec<String> design = o.accepts("design").withRequiredArg().defaultsTo("LightMode");
 
         OptionSet os = o.parse(args);
 
         cli = os.has("cli");
-        installer = os.has("install");
 
         minimal = os.has("minimal");
 
@@ -39,8 +35,6 @@ public class DREP {
 
         if(cli) {
             DREPCLI.run();
-        }else if(installer) {
-            DREPInstaller.run();
         }else {
             Colors selectedColors = new LightMode();
 
@@ -50,8 +44,10 @@ public class DREP {
                 }
             }
 
-            System.out.println(selectedColors.name());
-            System.out.println(minimal);
+            System.out.println("Arguments:");
+            System.out.println("Theme selected=" + selectedColors.name());
+            System.out.println("Minimal Mode=" + minimal);
+            System.out.println("CLI Mode=" + cli);
 
             DREPClient.run(minimal, selectedColors);
         }
