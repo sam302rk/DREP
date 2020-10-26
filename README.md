@@ -3,6 +3,12 @@
 © GamingCraft_hd 2020<br>
 Made for UtilityClient, PixelSplash and Statify.
 
+## What means DREP?
+D - Discord<br>
+R - Rich<br>
+E - E<br>
+P - Presence
+
 ## Requirements
 
 ### For Users
