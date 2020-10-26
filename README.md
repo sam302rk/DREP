@@ -19,18 +19,6 @@ Made for UtilityClient, PixelSplash and Statify.
 - Visual Studio Code, Visual Studio 2011, 2013, 2015, 2019 or 2020, Eclipse, Code::Blocks or JetBrains Intellij IDEA
 
 ## Installation
-
-### Desktop
 - Download the latest version.
-- Install it using this command: 
-```batch
-java -Xmx2G -jar DREP.jar --install
-```
+- Install it using the installer.
 - You'll find a shortcut to DREP on your desktop.
-
-### CLI
-- Download the latest version.
-- Run it using this command: 
-```batch
-java -Xmx2G -jar DREP.jar --cli [args...]
-```
