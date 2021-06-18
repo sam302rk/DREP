@@ -1,4 +1,4 @@
-# [DREP](https://github.com/GamingCrafthd/DREP/releases)
+# [DREP](https://github.com/GamingCrafthd/DREP/releases) ![](https://img.shields.io/github/downloads/GamingCrafthd/DREP/total?style=for-the-badge) ![](https://img.shields.io/github/v/release/GamingCrafthd/DREP?style=for-the-badge)
 
 © GamingCraft_hd 2020 - 2021<br>
 Licensed under the Utility-Client License.
@@ -22,6 +22,6 @@ P - Presence
 - 4GB RAM
 - Any IDE or Text Editor
 
-## Installation
-~~Install it using the [installer](https://github.com/GamingCrafthd/DREP/releases/download/1.0/DREP-Installer-win64.exe).<br>
-You'll find a shortcut to DREP on your desktop.~~
+## Download
+- Go to the [releases tab](https://github.com/GamingCrafthd/DREP/releases).
+- Download the Windows Installer or download the Universal JAR
